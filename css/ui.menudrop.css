@@ -1,0 +1,50 @@
+.ui-menudrop {
+	cursor: auto;
+	font-weight: normal;
+	line-height: 1em;
+	position: absolute;
+	z-index:5000000;
+}
+.ui-menudrop > .ui-menudrop-triangle {
+  position: absolute;
+  top: -26px;
+  border-top: 14px solid transparent;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #555; 
+}
+.ui-menudrop > .ui-menudrop-header {
+  font-weight: bold;
+  margin: 0;
+  padding: 3px;
+  height: 27px;
+  line-height:25px;
+  text-shadow:rgba(0, 0, 0, 1) 0 -1px 0;
+  text-align: center; 
+}
+.ui-menudrop > .ui-menudrop-content {
+  width: 190px;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size:12px;
+}
+.ui-menudrop > .ui-menudrop-content ul {
+	list-style:none;
+	margin:0;	
+	padding:0;
+}
+.ui-menudrop > .ui-menudrop-content ul li {
+	line-height:25px;
+	padding-left: 10px;
+}
+.ui-menudrop > .ui-menudrop-content ul li:first-child {
+	margin-top: 0;
+}
+/*.ui-menudrop > .ui-menudrop-content ul li.item:hover {border-bottom:#1443BE 1px solid;}*/
+.ui-menudrop > .ui-menudrop-content ul li a {padding:0 14px;display:block;}
+.ui-menudrop > .ui-menudrop-content ul li a:link, .ui-menudrop > .ui-menudrop-content ul li a:visited {text-decoration:none;}
+.ui-menudrop > .ui-menudrop-content ul li a:focus, .ui-menudrop > .ui-menudrop-content ul li a:hover {
+	text-decoration:none;
+	text-shadow:rgba(0, 0, 0, .55) 0 -1px 0;
+}

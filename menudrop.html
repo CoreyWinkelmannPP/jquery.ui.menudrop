@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>jQuery UI menudrop</title>
+		<link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.8.9.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui.menudrop.css" />
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			nav ul {
+				margin: 10px;
+				padding: 10px;
+			}
+			nav li {
+				float: left;
+				margin-right: 10px;
+				list-style-type: none;
+			}
+			.clear {
+				clear: both;
+				height: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				<li><a href="#">Item 3</a></li>
+				<li id="item-4"><a href="#">Item 4</a></li>
+			</ul>
+			<div class="clear"></div>
+		</nav>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.menudrop.js"></script>
+		<script type="text/javascript">
+			$('nav li a').button();
+			$('#item-4').menudrop({
+				title : 'Hello There',
+				menuItems : [
+					{
+						text : 'Google',
+						link_to : 'http://www.google.com'
+					},
+					{
+						text : 'Yahoo',
+						link_to : 'http://www.yahoo.com'
+					}
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -3,7 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>jQuery UI menudrop</title>
-		<link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.8.9.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/dark-hive/jquery-ui-1.8.9.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/ui.menudrop.css" />
 		<style type="text/css">
 			body {
@@ -28,7 +29,7 @@
 	<body>
 		<nav>
 			<ul>
-				<li><a href="#">Item 1</a></li>
+				<li id="item-1"><a href="#">Item 1</a></li>
 				<li><a href="#">Item 2</a></li>
 				<li><a href="#">Item 3</a></li>
 				<li id="item-4"><a href="#">Item 4</a></li>
@@ -40,6 +41,19 @@
 		<script type="text/javascript" src="js/jquery.ui.menudrop.js"></script>
 		<script type="text/javascript">
 			$('nav li a').button();
+			$('#item-1').menudrop({
+				title : 'Item 1',
+				menuItems : [
+					{
+						text : 'Google',
+						link_to : 'http://www.google.com'
+					},
+					{
+						text : 'Yahoo',
+						link_to : 'http://www.yahoo.com'
+					}
+				]
+			});
 			$('#item-4').menudrop({
 				title : 'Hello There',
 				menuItems : [

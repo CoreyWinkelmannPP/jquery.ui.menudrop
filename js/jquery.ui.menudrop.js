@@ -14,12 +14,12 @@
 		_setOption: function(option, value) {
 			$.Widget.prototype._setOption.apply( this, arguments );
 		},
-		_init: function() {
+		_create: function() {
 			var self = this,
 				o = self.options,
 				el = self.element,
 				container = self.container = $('<div></div>').addClass("ui-widget ui-menudrop ui-state-default ui-corner-all").hide().appendTo('body'),
-				triangle = $('<div></div>').addClass("ui-menudrop-triangle").appendTo(container),
+				triangle = $('<div></div>').addClass("ui-menudrop-triangle").css('border-color', 'transparent transparent ' + container.css('background-color')).appendTo(container),
 				header = $('<div></div>').addClass('ui-widget-header ui-menudrop-header ui-corner-top'),
 				content = $('<div></div>').addClass('ui-menudrop-content ui-widget-content ui-corner-bottom'),
 				ul = $('<ul></ul>').addClass('ui-menudrop-list'),
